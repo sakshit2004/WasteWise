@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canadian Companies Sustainability Ratings</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f0f8ff; /* Light Alice Blue background */
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+            color: #00796b; /* Teal color */
+            margin-top: 20px;
+            font-size: 2.5em;
+        }
+
+        #header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        #back-home-button {
+            background-color: #00796b;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 20px;
+        }
+
+        #back-home-button:hover {
+            background-color: #004d40;
+        }
+
+        #search-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        #search-bar {
+            width: 80%;
+            max-width: 600px;
+            padding: 10px;
+            border: 2px solid #00796b;
+            border-radius: 25px;
+            font-size: 1em;
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+
+        #search-bar:focus {
+            border-color: #004d40;
+        }
+
+        #filters {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 10px;
+        }
+
+        .filter {
+            background-color: #00796b;
+            color: white;
+            padding: 10px 20px;
+            margin: 5px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .filter:hover {
+            background-color: #004d40;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        li {
+            background: #ffffff;
+            border: 1px solid #00796b;
+            border-radius: 10px;
+            margin: 10px 0;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        li:hover {
+            transform: scale(1.02);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .stars {
+            color: #f5c518;
+            font-size: 1.5em;
+        }
+
+        .company-info {
+            max-width: 70%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            font-size: 1.1em;
+            line-height: 1.4;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <button id="back-home-button" onclick="window.location.href='index.html'">Back to Homepage</button>
+    </div>
+    <h1>Canadian Companies Sustainability Ratings</h1>
+    <div id="search-container">
+        <input type="text" id="search-bar" placeholder="Search for companies...">
+        <div id="filters">
+            <span class="filter" data-rating="5">5 Stars</span>
+            <span class="filter" data-rating="4">4 Stars</span>
+            <span class="filter" data-rating="3">3 Stars</span>
+            <span class="filter" data-rating="2">2 Stars</span>
+            <span class="filter" data-rating="1">1 Star</span>
+        </div>
+    </div>
+    <ul id="company-list">
+        <!-- List of companies will be inserted here by JavaScript -->
+    </ul>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const companies = [
+                { name: "Suncor Energy Inc.", rating: 4, details: "Oil & Gas company focused on energy sustainability." },
+                { name: "Canadian National Railway Co.", rating: 3, details: "Railway company with green initiatives in logistics." },
+                { name: "Loblaw Companies Ltd.", rating: 4, details: "Retailer with sustainable sourcing and waste reduction practices." },
+                { name: "Enbridge Inc.", rating: 3, details: "Energy company investing in renewable energy projects." },
+                { name: "Telus Corp.", rating: 4, details: "Telecommunications company with strong recycling programs." },
+                { name: "Bank of Montreal", rating: 5, details: "Financial institution with comprehensive ESG policies." },
+                { name: "RBC", rating: 4, details: "Bank with a focus on green finance and sustainability projects." },
+                { name: "Scotiabank", rating: 4, details: "Banking with sustainability initiatives and eco-friendly operations." },
+                { name: "Toronto-Dominion Bank", rating: 5, details: "Leading in sustainability and environmental impact reduction." },
+                { name: "Shopify Inc.", rating: 4, details: "E-commerce company with significant energy-efficient initiatives." },
+                { name: "Hydro-Québec", rating: 5, details: "Electric utility company with a strong focus on renewable energy." },
+                { name: "Brookfield Renewable Partners", rating: 5, details: "Global leader in renewable energy solutions." },
+                { name: "TransCanada Corp.", rating: 3, details: "Energy company with investment in sustainable energy projects." },
+                { name: "Manulife Financial Corporation", rating: 4, details: "Insurance company with a commitment to green practices." },
+                { name: "Sun Life Financial Inc.", rating: 4, details: "Financial services company with robust environmental policies." },
+                { name: "Canadian Tire Corporation", rating: 3, details: "Retailer working on reducing its environmental footprint." },
+                { name: "Rogers Communications", rating: 3, details: "Telecom company with initiatives in electronic waste management." },
+                { name: "Bell Canada", rating: 4, details: "Telecom leader with strong sustainability programs." },
+                { name: "Royal Bank of Canada", rating: 5, details: "Highly rated for its environmental and social governance." },
+                { name: "Cenovus Energy Inc.", rating: 3, details: "Oil company with ongoing improvements in environmental practices." },
+                { name: "Imperial Oil Ltd.", rating: 3, details: "Energy company with ongoing efforts to improve sustainability." },
+                { name: "Husky Energy Inc.", rating: 3, details: "Focuses on reducing its environmental impact in energy production." },
+                { name: "Alberta Oil Sands", rating: 2, details: "Oil sands company with moderate sustainability efforts." },
+                { name: "Goldcorp Inc.", rating: 3, details: "Mining company with green practices in mineral extraction." },
+                { name: "Teck Resources Limited", rating: 4, details: "Mining company with initiatives for environmental protection." },
+                { name: "Northland Power Inc.", rating: 4, details: "Renewable energy company with a focus on sustainability." },
+                { name: "Innergex Renewable Energy Inc.", rating: 4, details: "Renewable energy producer with a strong sustainability agenda." },
+                { name: "Gildan Activewear Inc.", rating: 3, details: "Apparel manufacturer with initiatives in eco-friendly materials." },
+                { name: "Imperial Oil Limited", rating: 3, details: "Energy company with ongoing efforts to improve sustainability." },
+                { name: "Sierra Wireless", rating: 4, details: "Wireless technology company with sustainability programs." },
+                { name: "WestJet Airlines Ltd.", rating: 3, details: "Airline working on reducing its carbon footprint." },
+                { name: "Canadian Pacific Railway Limited", rating: 4, details: "Railway company with investments in cleaner technologies." },
+                { name: "BCE Inc.", rating: 4, details: "Telecommunications company with green initiatives." }
+            ];
+
+            const companyList = document.getElementById("company-list");
+            const searchBar = document.getElementById("search-bar");
+            const filters = document.querySelectorAll(".filter");
+
+            function renderCompanies(filteredCompanies) {
+                companyList.innerHTML = "";
+                filteredCompanies.forEach(company => {
+                    const listItem = document.createElement("li");
+                    listItem.innerHTML = `
+                        <div class="company-info">
+                            <strong>${company.name}</strong><br>
+                            <small>${company.details}</small>
+                        </div>
+                        <span class="stars">${'★'.repeat(company.rating)}${'☆'.repeat(5 - company.rating)}</span>
+                    `;
+                    companyList.appendChild(listItem);
+                });
+            }
+
+            function filterCompanies(rating) {
+                const filteredCompanies = companies.filter(company => company.rating === parseInt(rating));
+                renderCompanies(filteredCompanies);
+            }
+
+            function searchCompanies(query) {
+                const filteredCompanies = companies.filter(company =>
+                    company.name.toLowerCase().includes(query.toLowerCase())
+                );
+                renderCompanies(filteredCompanies);
+            }
+
+            searchBar.addEventListener("input", (e) => {
+                searchCompanies(e.target.value);
+            });
+
+            filters.forEach(filter => {
+                filter.addEventListener("click", () => {
+                    const rating = filter.getAttribute("data-rating");
+                    filterCompanies(rating);
+                });
+            });
+
+            // Initial render
+            renderCompanies(companies);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- --------- UNICONS ---------- -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+
+    <!-- --------- CSS ---------- -->
+    <link rel="stylesheet" href="Style.css">
+
+    <!-- --------- FAVICON ---------- -->
+    <link rel="shortcut icon" href="Logoterra.jpg" type="image/x-icon">
+
+    <title> Waste Wise</title>
+</head>
+<body>
+   <div class="container">
+    <!-- --------------- HEADER --------------- -->
+      <nav id="header">
+        <div class="nav-logo">
+            <p class="nav-name">WasteWise </p>
+        </div>
+        <div class="nav-menu" id="myNavMenu">
+            <ul class="nav_menu_list">
+                <li class="nav_list">
+                    <a href="#home" class="nav-link active-link">Home</a>
+                    <div class="circle"></div>
+                </li>
+                <li class="nav_list">
+                    <a href="#about" class="nav-link">About</a>
+                    <div class="circle"></div>
+                </li>
+            </li>
+            <li class="nav_list">
+                <a href="#projects" class="nav-link">Initiatives</a>
+                <div class="circle"></div>
+            </li>
+            <li class="nav_list">
+              <a href="#Team" class="nav-link">Meet the Team</a>
+              <div class="circle"></div>
+          </li>
+            <li class="nav_list">
+                <a href="#contact" class="nav-link">Feedback</a>
+                <div class="circle"></div>
+            </li>
+            </ul>
+        </div>
+        <div class="nav-button">
+          <button class="btn"
+          onclick="window.open('Research.html')">Research Sustainable Comapnies<i class="uil uil-file-alt"></i></button>
+        </div>
+        <div class="nav-menu-btn">
+            <i class="uil uil-bars" onclick="myMenuFunction()"></i>
+        </div>
+      </nav>
+
+
+    <!-- -------------- MAIN ---------------- -->
+    <main class="wrapper">
+       <!-- -------------- FEATURED BOX ---------------- -->
+       <section class="featured-box" id="home">
+          <div class="featured-text">
+            <!-- <div class="featured-text-card">
+                <span>Sakshit Sharma</span>
+            </div> -->
+            <div class="featured-name">
+                <p> <span class="typedText"></span></p>
+            </div>
+            <div class="featured-text-info">
+                <p> Redefining E-Waste Management for a Sustainable Future
+                </p>
+            </div>
+            <div class="featured-text-btn">
+                <button class="btn blue-btn"
+                 onclick="window.open('https://www.linkedin.com/in/sakshitsharma/', '_blank')">My linkedin<i class="uil uil-linkedin-alt"></i></button>
+                 <button class="btn blue-btn"
+                 onclick="window.open('https://github.com/sakshit2004', '_blank')">My Github <i class="uil uil-github-alt"></i></button>
+            </div>
+            <div class="social_icons">
+              <div class="icon"><a href="mailto:Wastewise@ca.com"><i class="uil uil-envelope"></i></a></div>
+              <div class="icon"><a href="https://www.linkedin.com/in" target="_blank"><i class="uil uil-linkedin-alt"></i></a></div>
+              <div class="icon"><a href="https://twitter.com/" target="_blank"><i class="uil uil-twitter-alt"></i></a></div>
+              <div class="icon"><a href="https://instagram.com/" target="_blank"><i class="uil uil-instagram"></i></a></div>
+            </div>
+          </div>
+          <div class="featured-image">
+            <div class="image">
+                <img src="Logoterra.jpg" alt="avatar">
+            </div>
+        </div>
+       </section>
+       <!-- -------------- ABOUT BOX ---------------- -->
+       <section class="section" id="about">
+          <div class="top-header">
+            <h1>About Us</h1>
+          </div>
+          <div class="row">
+            <div class="col">
+              <div class="about-info">
+                <h3>Our Mission</h3>
+                <p>
+                  Wastewise is dedicated to revolutionizing e-waste management through cutting-edge technology. Our goal is to help companies minimize their ecological footprint and embrace sustainable practices.
+                </p>
+                <div class="about-btn">
+                  <button class="btn" onclick="window.open('https://github.com/sakshit2004/Portfolio/blob/main/_resume.pdf', '_blank')">Our Team </button>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="skills-box">
+                <div class="skills-header">
+                  <h3>Our Expertise</h3>
+                </div>
+                <div class="skills-list">
+                  <span>IoT Solutions</span>
+                  <span>Data Analytics</span>
+                  <span>Artificial Intelligence</span>
+                  <span>Environmental Sustainability</span>
+                </div>
+              </div>
+              <div class="skills-box">
+                <div class="skills-header">
+                  <h3>Technologies We Use</h3>
+                </div>
+                <div class="skills-list">
+                  <span>5G Connectivity</span>
+                  <span>IoT Devices</span>
+                  <span>AI Algorithms</span>
+                  <span>Web Platforms</span>
+                </div>
+              </div>
+              <div class="skills-box">
+                <div class="skills-header">
+                  <h3>Our Values</h3>
+                </div>
+                <div class="skills-list">
+                  <span>Innovation</span>
+                  <span>Sustainability</span>
+                  <span>Transparency</span>
+                  <span>Community Engagement</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+       </section>
+              <!-- -------------- PROJECT BOX ---------------- -->
+              <section id="projects">
+                <p class="section__text__p1">Explore Our Initiatives</p>
+                <h1 class="title"></h1>
+                <div class="experience-details-container">
+                    <div class="about-containers">
+                        <div class="details-container color-container">
+                            <div class="article-container"></div>
+                            <h3 class="experience-sub-title project-title">Smart E-Waste Bins Deployment</h3>
+                            <p class="project-description">Installation of IoT-equipped e-waste bins in tech companies to track and manage electronic waste efficiently.</p>
+                            <div class="btn-container">
+                                <button class="btn btn-color-2 project-btn" onclick="window.open('#', '_blank')">Learn More</button>
+                            </div>
+                        </div>
+                        <div class="details-container color-container">
+                            <div class="article-container"></div>
+                            <h3 class="experience-sub-title project-title">Data Analytics for E-Waste</h3>
+                            <p class="project-description">Using advanced data analytics to monitor e-waste disposal, technology reuse, and purchasing habits for optimizing tech usage.</p>
+                            <div class="btn-container">
+                                <button class="btn btn-color-2 project-btn" onclick="window.open('#', '_blank')">Learn More</button>
+                            </div>
+                        </div>
+                        <div class="details-container color-container">
+                            <div class="article-container"></div>
+                            <h3 class="experience-sub-title project-title">Public Awareness Campaign</h3>
+                            <p class="project-description">Raising public awareness about the importance of e-waste recycling and the environmental impact of electronic waste.</p>
+                            <div class="btn-container">
+                                <button class="btn btn-color-2 project-btn" onclick="window.open('#', '_blank')">Learn More</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+<!-- -------------- Meet the team ---------------- -->
+<section class="section" id="Team">
+  <div class="top-header">
+    <p class="section__text__p1">Meet the team</p>
+    <p></p>
+  </div>
+  
+  <style>
+    html {
+      box-sizing: border-box;
+    }
+    
+    *, *:before, *:after {
+      box-sizing: inherit;
+    }
+    
+    .column {
+      float: left;
+      width: 33.3%;
+      margin-bottom: 16px;
+      padding: 0 8px;
+    }
+    
+    @media screen and (max-width: 650px) {
+      .column {
+        width: 100%;
+        display: block;
+      }
+    }
+    
+    .card {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      background: var(--color-white);
+      border-radius: 10px;
+    }
+    
+    .container {
+      padding: 0 16px;
+    }
+    
+    .container::after, .row::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+    
+    .title {
+      color: grey;
+    }
+    
+    .button {
+      border: none;
+      outline: 0;
+      display: inline-block;
+      padding: 8px;
+      color: white;
+      background-color: var(--first-color);
+      text-align: center;
+      cursor: pointer;
+      width: 100%;
+      border-radius: 5px;
+    }
+    
+    .button:hover {
+      background-color: var(--first-color-hover);
+    }
+  </style>
+
+  <div class="row">
+    <div class="column">
+      <div class="card">
+        <div class="container">
+          <h3>Sakshit sharma</h3>
+          <p>Sakshit is a Data Engineering Co-op at City of Ottawa, his background includes experience in cloud technologies, Data, AI and ML.
+            Currently pursuing computer programming at Algonquin College, Sakshit brings hands on experience to the team.
+            Winner of Discover TechNata Hackthon 2023, Founder TechPordogies at Algonquin college, Speaker at CDAO.
+          </p>
+          <p>sakshit2004@gmail.com</p>
+          <p><button class="button">Contact</button></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="column">
+      <div class="card">
+        <div class="container">
+          <h3>Srishti Srishti</h3>
+          <p>Srishti is a highly skilled Application Developer Co-op at CIBC with a robust background in software and Application development. 
+            Currently studying Computer Science at Algonquin College, Srishti brings a wealth of knowledge to the team.
+            She is passionate about leveraging cutting-edge technologies, including AI, and ML, to develop innovative and impactful solutions.</p>
+          <p>srishti.arora052@gmail.com</p>
+          <p><button class="button">Contact</button></p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="column">
+      <div class="card">
+        <div class="container">
+          <h3>Raymond and Jibril</h3>
+          <p>Raymond and Jibril are cs student at tmu specializing in Frontend web and game development. Raymond has experience in making projects in html/css and js and is passionate about creating high quality user applications that anyone can use.
+            Whereas Jibril has a passion of learning various skills to be able to apply it to personal goals and interests.</p>
+          <p>raymond3.lam@torontomu.ca</p>
+          <p><button class="button">Contact</button></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+            
+<!-- -------------- Feedback BOX ---------------- -->
+<section class="section" id="contact">
+  <div class="top-header">
+    <h1>Share your Feedback</h1>
+    <span>
+      Thanks for sending us your ideas, issues, or appreciations. We can't respond individually, but we'll pass it on to the teams who are working to help make Waste wise better for everyone.
+    </span>
+  </div>
+  <div class="row">
+    <div class="col">
+      <div class="contact-info">
+        <h2>Contact us <i class="uil uil-corner-right-down"></i></h2>
+        <p><i class="uil uil-envelope"></i> Email: Wastewise@ca.com</p>
+        <p><i class="uil uil-phone"></i> Tel: +1 (226)961-8315</p>
+      </div>
+    </div>
+    <div class="col">
+      <div class="form-control">
+        <form onsubmit="return submitForm()" id="contactForm">
+          <div class="form-inputs">
+            <input type="text" class="input-field" placeholder="Name" required>
+            <input type="email" class="input-field" placeholder="Email" required>
+          </div>
+          <br>
+          <div class="text-area">
+            <textarea placeholder="Feedback" required></textarea>
+          </div>
+          <div class="form-button">
+            <button type="submit" class="btn">Send <i class="uil uil-message"></i></button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+    <!-- --------------- FOOTER --------------- -->
+    <footer>
+        <div class="top-footer">
+            <p>Waste wise</p>
+        </div>
+        <div class="middle-footer">
+            <ul class="footer-menu">
+                <li class="footer_menu_list">
+                    <a href="#home">Home</a>
+                </li>
+                <li class="footer_menu_list">
+                    <a href="#about">About</a>
+                </li>
+                <li class="footer_menu_list">
+                    <a href="#projects">Projects</a>
+                </li>
+                <li class="footer_menu_list">
+                    <a href="#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+        <div class="footer-social-icons">
+          <div class="icon"><a href="mailto:Wastewise@ca.com"><i class="uil uil-envelope"></i></a></div>
+          <div class="icon"><a href="https://www.linkedin.com/in" target="_blank"><i class="uil uil-linkedin-alt"></i></a></div>
+          <div class="icon"><a href="https://twitter.com/" target="_blank"><i class="uil uil-twitter-alt"></i></a></div>
+          <div class="icon"><a href="https://instagram.com/" target="_blank"><i class="uil uil-instagram"></i></a></div>
+        </div>        
+        <div class="bottom-footer">
+            <p>Copyright &copy; <a href="#home" style="text-decoration: none;">Wastewise</a> - All rights reserved</p>
+        </div>
+    </footer>
+
+    </div>
+
+
+
+
+    <!-- ----- TYPING JS Link ----- -->
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+
+       <!-- ----- SCROLL REVEAL JS Link----- -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- ----- MAIN JS ----- -->
+    <script src="JavaScript.js"></script>
+</body>
+</html>
